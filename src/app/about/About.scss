@@ -1,0 +1,58 @@
+
+$primary-color: #e63946;
+$secondary-color: #333; 
+$background-color: #272b49; 
+$text-color: #857eb9; 
+$card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.about-us {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px 30px;
+  background-color: $background-color;
+  border-radius: 10px;
+  box-shadow: $card-shadow;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $text-color;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 20px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 15px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

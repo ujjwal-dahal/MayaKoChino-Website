@@ -1,0 +1,125 @@
+// Color Variables
+$primary-color: #E63946; 
+$secondary-color: #198dd5; 
+$highlight-color: #E63946; 
+$text-color: #F1FAEE; 
+$background-color: #1E1E2E; 
+$shadow-color: rgba(0, 0, 0, 0.5); 
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $background-color;
+  padding: 20px 0;
+  color: $text-color;
+
+  .link-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+
+    .line1,
+    .line2 {
+      background-color: $secondary-color;
+      height: 2px;
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .link {
+      display: flex;
+      gap: 15px;
+
+      .footer-link {
+        .icon {
+          color: $text-color;
+          font-size: 25px;
+          transition: color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            color: $primary-color;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin: 20px 0;
+
+    .name {
+      font-family: 'Arima', cursive;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 5px;
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: $text-color;
+      font-weight: 300;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+
+    a {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: $text-color;
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $highlight-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .link-area {
+      flex-direction: column;
+      align-items: center;
+
+      .line1,
+      .line2 {
+        display: none;
+      }
+
+      .link {
+        gap: 10px;
+      }
+    }
+
+    .nav-link {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title .name {
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      gap: 10px;
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
